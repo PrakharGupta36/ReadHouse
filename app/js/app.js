@@ -13,25 +13,41 @@ function main(data) {
     let booksTitle = document.createElement("h4");
     let link = document.createElement("a");
     let bookInfo = document.createElement("p");
+    let booksRating = document.createElement("p");
+    let bookPageCount = document.createElement("p");
 
     booksCard.setAttribute("class", "card");
     booksImg.setAttribute("alt", "img");
     booksDetails.setAttribute("class", "cardDetails");
-    
+    booksTitle.setAttribute("class", "cardTitle");
     link.setAttribute("target", "_blank");
 
     booksImg.src = `${element.volumeInfo.imageLinks.thumbnail}`;
     booksTitle.textContent = element.volumeInfo.title;
     link.href = `${element.volumeInfo.canonicalVolumeLink}`;
-    bookInfo.textContent = element.volumeInfo.description
+    bookInfo.textContent = element.volumeInfo.description;
+    if (element.volumeInfo.averageRating !== undefined) {
+      booksRating.textContent = `Rating : ${element.volumeInfo.averageRating} ⭐️`;
+    } else {
+      booksRating.textContent = `Rating : Not available`;
+    }
+    if (element.volumeInfo.pageCount !== undefined) {
+      bookPageCount.textContent = ` Page Count : ${element.volumeInfo.pageCount}`;
+    } else {
+      bookPageCount.textContent = `Page Count : Not available`;
+    }
 
+    // bookPageCount.textContent = `Page Count ${element.volumeInfo.}`
 
-    list.appendChild(booksCard);
+    list.appendChild(link);
+    link.appendChild(booksCard);
     booksCard.appendChild(booksImg);
     booksCard.appendChild(booksDetails);
-    booksDetails.appendChild(link);
-    booksDetails.appendChild(bookInfo);
-    link.appendChild(booksTitle);
+    booksDetails.appendChild(booksTitle);
+    booksDetails.appendChild(booksRating);
+    booksDetails.appendChild(bookPageCount);
+
+    input.value = ""
   });
 }
 

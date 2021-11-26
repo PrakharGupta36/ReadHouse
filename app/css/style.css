@@ -2,6 +2,7 @@
 
 * {
   font-family: "Barlow Condensed";
+  color: white;
 }
 
 html,
@@ -9,11 +10,8 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
-  background: rgba(245, 245, 245, 0.507) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  color: white;
+  background-color: brown;
 }
 
 header {
@@ -21,7 +19,6 @@ header {
   place-items: center;
   margin: 2rem 0;
   gap: 2rem;
-
 }
 
 input {
@@ -37,7 +34,7 @@ header button {
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem ;
+  font-size: 1rem;
   border-radius: 0.25rem;
 }
 
@@ -50,23 +47,39 @@ header button {
 }
 
 .card {
-  background-color: white;
   /* padding: 1rem; */
   width: 250px;
   border: 1px solid black;
   border-radius: 0.5rem;
   margin: 1rem;
+  cursor: pointer;
   box-shadow: 0 10px 16px rgba(17, 17, 26, 0.25),
     0 8px 24px rgba(17, 17, 26, 0.25), 0 16px 56px rgba(17, 17, 26, 0.25);
+  background: rgba(0, 0, 0, 0.178);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.cardDetails p{
-  padding: 1rem;
-  line-height: 2rem;
+input{
+  color: black;
 }
 
-.cardDetails p:hover{
-  visibility: visible;
+::placeholder{
+  color: black;
+}
+
+.cardDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.cardTitle {
+  grid-column: 1/3;
+  grid-row: 1;
 }
 
 a {
