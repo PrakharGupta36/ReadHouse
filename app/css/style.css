@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Barlow Condensed";
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  background: rgba(245, 245, 245, 0.507) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
+
+}
+
+input {
+  padding: 0.5rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+}
+
+header button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem ;
+  border-radius: 0.25rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  place-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.card {
+  background-color: white;
+  /* padding: 1rem; */
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: 0 10px 16px rgba(17, 17, 26, 0.25),
+    0 8px 24px rgba(17, 17, 26, 0.25), 0 16px 56px rgba(17, 17, 26, 0.25);
+}
+
+.cardDetails p{
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+.cardDetails p:hover{
+  visibility: visible;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card h4 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card img {
+  width: 250px;
+  height: 300px;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
